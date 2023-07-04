@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+    height: 95vh;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 255, 0.349), rgba(0, 0, 0, 0.185)),  
+    url("../images/download.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+/*https://bennettfeely.com/clippy/ - picture cutter*/  
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*Tõstab kordinaat teljestikus -0,5x ja -0,5y*/
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    color: white;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes /*Animation starter*/ moveInLeft {
+    0% /*Animation start*/ {
+            transform: translateX(-100px);
+            opacity: 0;
+    }
+
+    80% {
+        transform: translateX(20px);
+    }
+
+    90% {
+        transform: translateX(10px);
+    }
+
+    100% /*Animation end*/{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+    
+.heading-primary-sub {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 0.7rem;
+    color: yellow;
+    animation-name: moveinright;
+    animation-duration: 3s;
+}
+
+@keyframes moveinright {
+    0% /*Animation start*/ {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% /*Animation end*/{
+    transform: translateX(0);
+    opacity: 1;
+    }
+}
+
+.btn-container {
+    text-transform: capitalize; 
+    font-size: 1.7rem;
+    color: black;
+}
+
+.btn {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-container:hover {
+    color:lightblue;
+    background-color: gray;
+}
+
+.btn:hover {
+    color: yellow;
+}
